@@ -1,0 +1,409 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+
+	    <!-- Required meta tags -->
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Alex+Brush&display=swap" rel="stylesheet">
+
+	    <title>Marie's 19th Birthday Gift!</title>
+	<style>
+
+	h1 {
+	    font-family: "Great Vibes", cursive;
+	    font-weight: 400;
+	    font-size: 120px;
+	    text-shadow: 0 0 10px lightskyblue;
+	}
+
+	h2 {
+	    font-family: 'Poppins', sans-serif;
+	    font-weight: 400;
+	    letter-spacing: 2px;
+	    margin-top: -90px;
+	    text-shadow: 0 0 10px lightskyblue;
+	    font-weight: bold;
+
+	}
+
+	body {
+	  background-image: radial-gradient(circle, whitesmoke, skyblue);
+	  font-family: Montserrat, sans-serif;
+	}
+
+	.header-section{
+		background-color: aliceblue;
+		font-family: "Great Vibes", cursive;
+	    font-size: 0px;
+	    text-shadow: 0 0 10px lightskyblue;
+	    width: 100%;
+	    text-align: center;
+	}
+
+	/*NAVBAR*/
+
+	ul {
+	    list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+	    left: 0;
+	    overflow: hidden; /* box for the navigation bar*/
+	    background-color: deepskyblue;
+	    font-family: Montserrat, sans-serif;
+	}
+
+	li {
+	    float: left;
+	    display: inline;
+	    font-family: Montserrat, sans-serif;
+	}
+
+	li a {
+	    display: block;
+	    color: white;
+	    text-align: center;
+	    padding: 8px 94.5px;
+	    text-decoration: none;
+	    height: 20px;
+	    font-family: Montserrat, sans-serif;
+	    font-size: 18.8px;
+	}
+	
+	li a:hover {
+	    background-color: whitesmoke;
+	    color: deepskyblue;
+	    font-family: Montserrat, sans-serif;
+	}
+	
+	.active {
+	    background-color: whitesmoke;
+	    color: deepskyblue;
+	    font-family: Montserrat, sans-serif;
+	}
+
+	.container {
+	    display: flex;
+	    justify-content: center; /* Centers horizontally */
+	    align-items: center; /* Centers vertically */
+	    padding: 20px;
+	    flex-wrap: wrap; /* Prevents stretching */
+	    width: 100%; /* Ensures full width */
+	    padding-top: 0;
+	    margin-top: 0;
+	    font-family: Montserrat, sans-serif;
+	}
+	.navbar-custom {
+	    height: 35px;
+	    background-color: deepskyblue;
+	    width: 100%;
+	    margin-bottom: 0; 
+	    bottom: 0;
+	    display: flex;
+	    justify-content: space-around; 
+	    padding: 0;
+	    position: relative;
+	    z-index: 1000;
+	    font-family: Montserrat, sans-serif;
+	}
+
+	/*SLIDESHOW*/
+
+	.slideshow-container {
+            width: 30%;
+            position: relative;
+            overflow: hidden;
+            margin-left: 20px;
+            background-color: aliceblue;
+            border-radius: 30px;
+            box-shadow: 0 0 30px rgba(0, 123, 255, 0.7);
+		    font-family: Montserrat, sans-serif;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: 400px;
+        }
+
+        .slide img {
+            width: 100%; /* Make image fill container width */
+            height: 400px; /* Maintain aspect ratio */
+            object-fit: cover;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        /*LETTER*/
+
+        .letter-container {
+        	background-color: lightblue;
+		    color: midnightblue;
+		    font-size: 20px;
+		    font-family: Montserrat, sans-serif;
+		    border-radius: 10px;
+		    border: 2px midnightblue;
+		    box-shadow: 0 0 30px rgba(0, 123, 255, 0.7);
+		    width: 90%; 
+		    height: 100%;	
+		    text-align: center;
+		    padding: 20px 40px;
+		    overflow-y: auto;
+        	display: none; 	
+        }
+
+        .container {
+        	justify-content: space-evenly;
+        }
+
+        .letter-wrapper {
+		  display: flex;
+		  flex-direction: column;
+		  align-items: center;
+		  justify-content: center;
+		  width: 50%; /* Adjust as needed */
+		  height: 300px;
+		  margin: 50px auto; /* Center the whole wrapper */
+		  padding: 30px;
+		  background-color: aliceblue;
+		  border-radius: 40px;
+		  box-shadow: 0 0 40px rgba(0, 123, 255, 0.5);
+		  text-align: center;
+	    font-family: Montserrat, sans-serif;
+		}
+
+		.password-prompt input[type="password"] {
+		  padding: 10px;
+		  margin: 15px 0;
+		  border: 1px solid #ccc;
+		  border-radius: 5px;
+		  font-size: 16px;
+	    font-family: Montserrat, sans-serif;
+		}
+
+		.password-prompt button {
+		  padding: 10px 20px;
+		  background-color: deepskyblue;
+		  color: white;
+		  border: none;
+		  border-radius: 5px;
+		  cursor: pointer;
+		  font-size: 16px;
+		  transition: background-color 0.3s ease;
+	    font-family: Montserrat, sans-serif;
+		}
+
+		.password-prompt button:hover {
+		  background-color: lightskyblue;
+	    font-family: Montserrat, sans-serif;
+		}
+
+	</style>
+	</head>
+
+	<body>
+
+	<div class="header-section">
+		<br>
+		<p style="margin-top: 40px; font-size: 80px;"> Marie's 19th! </p>
+	</div>
+
+	<nav class="navbar navbar-expand-lg navbar-custom" style="margin-top: -80px;">
+            <div>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                    <b> <li class="nav-item"><a class="nav-link" href="homepage.html">Home Page</a></li> </b>
+                    <b> <li class="nav-item"><a class="active" href="message.html">You've Got A Message!</a></li> </b>
+                    <b> <li class="nav-item"><a class="nav-link" href="playlist.html">Reminds Me of You~</a></li> </b>
+                    <b> <li class="nav-item"><a class="nav-link" href="login.html">Log Out</a></li> </b>
+                	</ul>
+                </div>
+            </div>
+        </nav>
+        <br>
+		<br>
+        <br>
+
+    <div class="container">
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="image1.jpg" alt="Image 1">
+            <div class="text">my favorite picture of you ^_^</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="image2.jpg" alt="Image 2">
+            <div class="text">my favorite picture of us!</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="image3.jpg" alt="Image 3">
+            <div class="text">moonleaf partners :) #taramoonleaf</div>
+        </div>
+        <div class="slide fade">
+            <img src="image4.jpg" alt="Image 4">
+            <div class="text">a pic w/ the best track n fielder (you)!!</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="image5.jpg" alt="Image 5">
+            <div class="text">stressed cuz of stem talk check XD</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="image6.jpg" alt="Image 6">
+            <div class="text">my favorite stolen pic i got of u :)</div>
+        </div>
+        <div class="slide fade">
+            <img src="image7.jpg" alt="Image 7">
+            <div class="text">another favorite stolen pic (the sass i love)</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="image8.jpg" alt="Image 8">
+            <div class="text">another stolen pic of my co-parent of lea</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="image9.jpg" alt="Image 9">
+            <div class="text">one of the most zesty ahh pics of us</div>
+        </div>
+        <div class="slide fade">
+            <img src="image10.jpg" alt="Image 10">
+            <div class="text">frog dissection core! genbio >>> genchem </div>
+        </div>
+
+        <div class="slide fade">
+            <img src="image12.jpg" alt="Image 12">
+            <div class="text">waltz aftermath! hehe ily too <3</div>
+        </div>
+
+        <div class="slide fade">
+            <img src="image11.jpg" alt="Image 11">
+            <div class="text">this is my pov everyday (i will definitely miss this)</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+	<div class="letter-wrapper fade">
+	  <div class="password-prompt">
+	    <p style="font-family: Great Vibes, cursive; font-size: 60px; color: darkblue; letter-spacing: 1px;"><b>Unlock the Message!</b></p>
+	    <input type="password" id="passwordInput" placeholder="Enter Password">
+	    <button onclick="checkPassword()">Unlock</button>
+	    <p id="incorrectPassword" style="color: darkblue; display: none; font-family: Montserrat, sans-serif;">hint? aww you're scho <i>schweet</i>!</p>
+	  </div>
+	  <div class="letter-container" style="display: none;">
+	    <p style="font-family: Great Vibes, cursive; font-size: 50px; letter-spacing: 1px;"><b>Happy 19th Birthday, Marie!</b></p>
+		<p style="text-align: justify; font-family: Montserrat, sans-serif;"> First and foremost, you already know this as I often say it, but you hold such a significant place in my senior high journey. I will forever cherish the memories we have created, navigating all the ups and downs together. With all the events that transpired in high school, it just showed that you are a truly strong individual, someone who knows what they want and pursues both the achievable and what seemed impossible for you.
+		<br>
+		<br>
+		A notable aspect of being your seatmate was the shared moments of joy and triumph, and even our weird and random nerdiness, which allowed me to deeply appreciate you as a classmate, a friend, and as a person in general. You are undeniably loving, caring, and incredibly thoughtful. On days when I'm feeling low or struggling from stress, you have an amazing ability to brighten my day, bringing laughter and joy that makes everything feel so much better. I will forever thank you for all the times you supported me; acts of service is really your love language as well as words of affirmation—and I hope you know those were all noticed and are something I will cherish.
+		<br>
+		<br>
+		As college approaches, I know that with new beginnings come uncertainties and reasonable doubts. My wish for you is that you hold onto all the encouragement and support you have received, all the reassurances people have given you. You are going to do great; trust yourself for that. Your hard work and dedication are evident in everything you do, and an example is those early trips to Mentors for chemistry tutor sessions for a quiz that won't happen for two weeks. Life, in general, can feel daunting no matter the path you choose, but that's where the fun starts. This new chapter of your life is the most exciting one, another rollercoaster to ride on with many ups and downs and loops that will make us feel that we lost sense of direction—however, it is all pointing to a singular path, your success and dreams achieved.
+		<br>
+		<br>
+		To my partner in almost everything—the usual partner in pairworks seatworks in class such as WWYNs in Physics, my co-handler of GWC's events, my both careful and clumsy waltz partner, my noisy seatmate, my ranting + senti buddy, and more, but ultimately, <i> my safe space </i>—thank you for opening your life to me and making me a part of it. As you turn 19, I hope you never lose sight of who you are and continue to be the wonderful person I know and love. <b> Happy 19th Birthday, Marie! To more discoveries on life and of yourself <3 </b> <br><br><br>
+
+			Loving you always, <br>
+			Ysa</p>
+		<br>	
+	</div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex-1].style.display = "block";
+        }
+
+	  const correctPassword = "schweet";
+	  const passwordPrompt = document.querySelector('.password-prompt');
+	  const letterContainer = document.querySelector('.letter-container');
+	  const passwordInput = document.getElementById('passwordInput');
+	  const incorrectPasswordMessage = document.getElementById('incorrectPassword');
+
+	  function checkPassword() {
+	    if (passwordInput.value.toLowerCase() === correctPassword.toLowerCase()) {
+	      passwordPrompt.style.display = "none";
+	      letterContainer.style.display = "block";
+	    } else {
+	      incorrectPasswordMessage.style.display = "block";
+	      passwordInput.value = "";
+	    }
+	  }
+
+    </script>
+	</div>
+	</body>
+	</html>
+

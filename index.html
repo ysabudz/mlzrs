@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css%22%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Alex+Brush&display=swap" rel="stylesheet">
+
+    <title>Marie's 19th Birthday Gift!</title>
+
+<style>
+
+h1 {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-size: 120px;
+    text-shadow: 0 0 10px lightskyblue;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-top: -90px;
+    text-shadow: 0 0 10px lightskyblue;
+    font-weight: bold;
+
+}
+
+label {
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+input {
+    width: 110%;
+    max-width: 570px;
+    padding: 8px;
+    border: 1px solid #000;
+    display: inline;    
+
+}
+
+.button {
+  background-color: white;
+  color: deepskyblue;
+  padding: 8px 45px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: 2px solid deepskyblue;
+  border-radius: 10px;
+}
+
+.button:hover {
+  background-color: lightskyblue;
+  color: whitesmoke;
+}
+
+
+.login-box {
+    width: 550px;
+    padding: 20px;
+    border: 2px solid skyblue;
+    border-radius: 40px;    
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.7);
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.password-wrapper {
+    position: relative; /* Needed for absolute positioning of the icon */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 20px; /* Adjust as needed to position the icon */
+  top: 70%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none; /* Prevent text selection on click */
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  border-radius: 10px;
+  text-align: center;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-button {
+  background-color: darkblue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.modal-button:hover {
+  background-color: powderblue;
+  color: darkblue;
+}
+
+#errorMessage {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+body {
+  background-image: radial-gradient(circle, whitesmoke, skyblue);
+  font-family: Montserrat;
+}
+
+.header-box{
+
+}
+
+.details{
+    display: inline-block;
+}
+
+</style>
+</head>
+
+<body>
+
+<center>
+
+<div class="details">
+
+<div class="header-box">
+<h1> Marie's 19th! </h1>
+<h2> a birthday gift from ysa (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ </h2>
+</div>
+
+<br>
+
+<div class="login-box">
+
+<form id="login" onsubmit="redirectToPage(event)">
+
+  <div class="input">
+  <label> Username </label>
+  <input type="text" id="user" name="user" style="width: 400px; margin-left: 20px; font-family: Montserrat;">
+  </div>
+
+  <br>
+  
+  <div class="input password-wrapper">
+  <label> Password </label>
+  <input type="password" id="password" name="password" style="width: 400px; margin-left: 24px;">
+  </div>
+
+  <p style="text-align: left; font-size: 12px; margin-left: 20px;"><i> Hint: Birthday MM/DD/YYYY </i></p>
+
+<br>
+
+<button class="button" onclick="redirectToPage()">Log In</button>
+    
+</center>
+</form>
+
+<div id="errorModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h3>Login Failed</h3>
+    <p id="errorMessage">Invalid username or password. Please try again.</p>
+    <button class="modal-button" id="closeModalButton">Close</button>
+  </div>
+</div>
+
+<script>
+const passwordInput = document.getElementById('password');
+const togglePassword = document.getElementById('togglePassword');
+
+togglePassword.addEventListener('click', function() {
+    const type = passwordInput.getAttribute('type');
+    if (type === 'password') {
+        passwordInput.setAttribute('type', 'text');
+        this.textContent = '\u{1F441}'; // Eye icon (when visible)
+    } else {
+        passwordInput.setAttribute('type', 'password');
+        this.textContent = '\u{1F441}\u{0337}'; // Eye + Combining Long Solidus Overlay (when hidden)
+    }
+});
+
+function redirectToPage(event) {
+    event.preventDefault();
+
+    const user = document.getElementById('user').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const errorModal = document.getElementById('errorModal');
+    const closeModalButton = document.getElementById('closeModalButton');
+    const closeButtonSpan = document.querySelector('.close-button');
+
+    function closeModal() {
+        console.log("closeModal function called");
+        errorModal.style.display = "none";
+        console.log("Modal display set to none");
+    }
+
+    if (user === "marielizares" && password === "05062006") {
+        window.location.href = "homepage.html";
+    }
+    else {
+        console.log("Login failed, displaying modal");
+        errorModal.style.display = "block";
+
+        console.log("Attaching event listener to closeModalButton");
+        closeModalButton.addEventListener('click', closeModal);
+
+        console.log("Attaching event listener to closeButtonSpan");
+        closeButtonSpan.addEventListener('click', closeModal);
+
+        console.log("Attaching event listener to window for outside click");
+        window.addEventListener('click', function(event) {
+            if (event.target == errorModal) {
+                console.log("Clicked outside modal, closing");
+                closeModal();
+            }
+        });
+    }
+}
+
+</script>
+</div>
+</div>
+</body>
+</html>
+

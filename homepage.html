@@ -1,0 +1,186 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+
+	    <!-- Required meta tags -->
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Alex+Brush&display=swap" rel="stylesheet">
+
+	    <title>Marie's 19th Birthday Gift!</title>
+	<style>
+
+	h1 {
+	    font-family: "Great Vibes", cursive;
+	    font-weight: 400;
+	    font-size: 120px;
+	    text-shadow: 0 0 10px lightskyblue;
+	}
+
+	h2 {
+	    font-family: 'Poppins', sans-serif;
+	    font-weight: 400;
+	    letter-spacing: 2px;
+	    margin-top: -90px;
+	    text-shadow: 0 0 10px lightskyblue;
+	    font-weight: bold;
+
+	}
+
+	body {
+	  background-image: radial-gradient(circle, whitesmoke, skyblue);
+	}
+
+	.header-section{
+		background-color: aliceblue;
+		font-family: "Great Vibes", cursive;
+	    font-size: 0px;
+	    text-shadow: 0 0 10px lightskyblue;
+	    width: 100%;
+	    text-align: center;	
+	}
+
+	/*NAVBAR*/
+
+	ul {
+	    list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+	    left: 0;
+	    overflow: hidden; /* box for the navigation bar*/
+	    background-color: deepskyblue;
+	    font-family: Montserrat, sans-serif;
+	}
+
+	li {
+	    float: left;
+	    font-family: Montserrat, sans-serif;
+	}
+
+	li a {
+	    display: block;
+	    color: white;
+	    font-family: Montserrat, sans-serif;
+	    text-align: center;
+	    padding: 8px 94.5px;
+	    text-decoration: none;
+	    height: 20px;
+	    font-size: 18.8px;
+	}
+	
+	li a:hover {
+	    background-color: whitesmoke;
+	    color: deepskyblue;
+	    font-family: Montserrat, sans-serif;
+	}
+	ul {
+	    list-style-type: none;
+	    font-family: Montserrat, sans-serif;
+	    margin: 0;
+	    padding: 0;
+	}
+	li {
+	    display: inline;
+	}
+	
+	.active {
+	    background-color: whitesmoke;
+	    color: deepskyblue;
+	    font-family: Montserrat, sans-serif;
+	}
+
+	.container {
+	    display: flex;
+	    justify-content: center; /* Centers horizontally */
+	    align-items: center; /* Centers vertically */
+	    padding: 20px;
+	    flex-wrap: wrap; /* Prevents stretching */
+	    width: 100%; /* Ensures full width */
+	    padding-top: 0;
+	    margin-top: 0;
+	    font-family: Montserrat, sans-serif;
+	}
+	.navbar-custom {
+	    height: 35px;
+	    background-color: deepskyblue;
+	    width: 100%;
+	    margin-bottom: 0; 
+	    bottom: 0;
+	    display: flex;
+	    justify-content: space-around; 
+	    padding: 0;
+	    position: relative;
+	    z-index: 1000;
+	    font-family: Montserrat, sans-serif;
+	}
+
+	.short-message {
+		font-family: Montserrat, sans-serif;
+		text-align: justify;
+		padding: 30px;
+		background-color: aliceblue;
+		color: darkblue;
+		width: 50%;
+		height: 40%;
+		border: 5px;	
+		border-style: solid;	
+		border-radius: 20px;
+		border-color: darkblue;
+        box-shadow: 0 0 100px rgba(0, 123, 255, 0.7);
+        margin-left: auto;
+        margin-right: auto;
+	    transform: translateY(50px); /* Start a bit below its final position */
+	    opacity: 0;
+	    animation: slideInBottom 0.8s ease-out forwards;
+	}
+
+		@keyframes slideInBottom {
+		  from {
+		    transform: translateY(50px);
+		    opacity: 0;
+		  }	
+		  to {
+			    transform: translateY(0);
+		    opacity: 1;
+		  }
+		}
+
+	</style>
+	</head>
+
+	<body>
+
+	<div class="header-section">
+		<br>
+		<p style="margin-top: 40px; font-size: 80px;"> Marie's 19th! </p>
+	</div>
+
+	<nav class="navbar navbar-expand-lg navbar-custom" style="margin-top: -80px	;">
+            <div>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                    <b> <li class="nav-item"><a class="active" href="homepage.html">Home Page</a></li> </b>
+                    <b> <li class="nav-item"><a class="nav-link" href="message.html">You've Got A Message!</a></li> </b>
+                    <b> <li class="nav-item"><a class="nav-link" href="playlist.html">Reminds Me of You~</a></li> </b>
+                    <b> <li class="nav-item"><a class="nav-link" href="login.html">Log Out</a></li> </b>
+                	</ul>
+                </div>
+            </div>
+        </nav>
+
+        <br>
+        <br>
+        <br>
+
+        <div class="short-message">
+            <p> Hey, Marie :) <br><br> Happy happy birthday to you! I can't believe you're 19 already... <br><br> Disclaimer: The website is not perfect but I did my best to execute what I had on mind. This is also supposed to be for your eyes only; thus, the login page. <br><br> However, feel free to share the link to others! You have my consent :> <br><br> Loving you always (no matter how goofy you are), <br> Ysa <3 </p>	
+        </div>
+
+	</body>
+	</html>
+

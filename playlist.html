@@ -1,0 +1,211 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+
+	    <!-- Required meta tags -->
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Alex+Brush&display=swap" rel="stylesheet">
+
+	    <title>Marie's 19th Birthday Gift!</title>
+		<style>
+
+	h1 {
+	    font-family: "Great Vibes", cursive;
+	    font-weight: 400;
+	    font-size: 120px;
+	    text-shadow: 0 0 10px lightskyblue;
+	}
+
+	h2 {
+	    font-family: 'Poppins', sans-serif;
+	    font-weight: 400;
+	    letter-spacing: 2px;
+	    margin-top: -90px;
+	    text-shadow: 0 0 10px lightskyblue;
+	    font-weight: bold;
+
+	}
+
+	body {
+	  background-image: radial-gradient(circle, whitesmoke, skyblue);
+	}
+
+	.header-section{
+		background-color: aliceblue;
+		font-family: "Great Vibes", cursive;
+	    font-size: 0px;
+	    text-shadow: 0 0 10px lightskyblue;
+	    width: 100%;
+	    text-align: center;
+	}
+
+
+	/*NAVBAR*/
+
+	ul {
+	    list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+	    left: 0;
+	    overflow: hidden; /* box for the navigation bar*/
+	    background-color: deepskyblue;
+	    font-family: Montserrat, sans-serif;
+	}
+
+	li {
+	    float: left;
+	    display: inline;
+	    font-family: Montserrat, sans-serif;
+	}
+
+	li a {
+	    display: block;
+	    color: white;
+	    font-family: ;	
+	    text-align: center;
+	   padding: 8px;
+	   width: 300px	;
+	   max-width: 1000px;
+	    text-decoration: none;
+	    height: 20px;
+	    font-family: Montserrat, sans-serif;
+	    font-size: 18.8px;
+	}
+	
+	li a:hover {
+	    background-color: whitesmoke;
+	    color: deepskyblue;
+	    font-family: Montserrat, sans-serif;
+	}
+
+	.active {
+	    background-color: whitesmoke;
+	    color: deepskyblue;
+	    font-family: Montserrat, sans-serif;
+	}
+
+	.container {
+	    display: flex;
+	    justify-content: center; 
+	    align-items: center; 
+	    padding: 20px;
+	    flex-wrap: wrap; 
+	    width: 100%;
+	    padding-top: 0;
+	    margin-top: 0;
+	    font-family: Montserrat, sans-serif;
+	}
+	.navbar-custom {
+	    height: 35px;
+	    background-color: deepskyblue;
+	    width: 100%;
+	    margin-bottom: 0; 
+	    bottom: 0;
+	    display: flex;
+	    justify-content: space-around; 
+	    padding: 0;
+	    position: relative;
+	    z-index: 1000;
+	    font-family: Montserrat, sans-serif;
+	}
+
+	/* playlist pictures */
+
+	.playlist-container {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  width: 80%;
+	  margin: 20px auto;
+	    font-family: Montserrat, sans-serif;
+	}
+
+	.playlist-link { 
+	  display: block; 
+	    font-family: Montserrat, sans-serif;
+	}
+
+	.playlist-cover {
+	  width: auto;
+	  height: auto;
+	  box-shadow: 0 0 30px rgba(0, 123, 255, 0.7);
+	  border-radius: 20px;
+	  overflow: hidden;
+	  transition: transform 0.3s ease-in-out; /* Add a smooth transition for the enlargement */
+	   margin: 30px;
+	   position: relative;
+	    font-family: Montserrat, sans-serif;
+	}
+
+	.playlist-cover:hover {
+	  transform: scale(1.1); 
+	  box-shadow: 0 0 40px rgba(0, 123, 255, 0.9); 
+	}	
+
+	.playlist-cover img {
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover;
+	  transition: opacity 0.3s ease-in-out; 
+
+	}
+
+	.playlist-cover:hover img {
+	  opacity: 0.8;
+	}
+
+
+	</style>
+	</head>
+
+	<body>
+
+	<div class="header-section">
+		<br>
+		<p style="margin-top: 40px; font-size: 80px;"> Marie's 19th! </p>
+	</div>
+
+	<nav class="navbar navbar-expand-lg navbar-custom" style="margin-top: -90px;">
+            <div>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                    <b> <li class="nav-item"><a class="nav-link" href="homepage.html">Home Page</a></li> </b>
+                    <b> <li class="nav-item"><a class="nav-link" href="message.html">You've Got A Message!</a></li> </b>
+                    <b> <li class="nav-item"><a class="active" href="playlist.html"> Reminds Me of You~</a></li> </b>
+                    <b> <li class="nav-item"><a class="nav-link" href="login.html">Log Out</a></li> </b>
+                	</ul>
+                </div>
+            </div>
+        </nav>
+    <br>
+    <br>
+
+	<div class="playlist-container">
+	  <a href="https://open.spotify.com/playlist/7eY3LH9tD9OfXovGthaXHO?si=_hK1MG5NQFOfKqGmvzbCyg&pi=0HIU9kBXTLWI6" class="playlist-link">
+	    <div class="playlist-cover">
+	      <img src="playlist-1.jpg" alt="Image 1">
+	    </div>
+	  </a>
+
+	  <a href="https://open.spotify.com/playlist/4SpdYJ3ma09K2p2eMqeeJ0?si=O514fvP3Te-kmfTvaxvWRA&pi=dOHVM0jGTBK8c" class="playlist-link">
+	    <div class="playlist-cover">
+	      <img src="playlist-2.jpg" alt="Image 2">
+	    </div>
+	  </a>
+
+	  <a href="https://open.spotify.com/playlist/0hIodp7d59Ee1A4ZoxMIeR?si=U2h0euX8SM262Cyw5ogW_g&pi=4VIkBJjQTFCBQ" class="playlist-link">
+	    <div class="playlist-cover">
+	      <img src="playlist-3.jpg" alt="Image 3">
+	    </div>
+	  </a>
+	</div>
+
+	</body>
+	</html>
+
